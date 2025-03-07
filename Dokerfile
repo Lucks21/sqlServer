@@ -1,11 +1,7 @@
 FROM mcr.microsoft.com/mssql/server:2019-latest
 
-# Acepta el acuerdo de licencia de Microsoft
 ENV ACCEPT_EULA=Y
-# Configura la contraseña para el usuario 'sa'
 ENV MSSQL_SA_PASSWORD=TuContraseñaSegura123
-# Expone el puerto por defecto de SQL Server
 EXPOSE 1433
 
-# Comando para ejecutar SQL Server
 CMD /opt/mssql/bin/sqlservr
